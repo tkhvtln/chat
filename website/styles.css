@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(135deg, #a8edea, #fed6e3); 
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,40 +11,164 @@ body {
     height: 100vh;
 }
 
-#chat-container {
-    background: white;
+#name-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
+}
+
+#username {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#enter-chat {
+    padding: 12px 20px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#enter-chat:hover {
+    background: #0056b3;
+}
+
+#chat-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 #chat {
     border: 1px solid #ddd;
-    padding: 10px;
-    height: 200px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
+    padding: 15px;
+    height: 100%;
+    overflow-y: auto;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Poppins', sans-serif; 
 }
 
-#username, #message {
-    width: calc(100% - 22px);
+#chat div {
+    background-color: #eef2f7; 
     padding: 10px;
+    border-radius: 5px;
     margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    max-width: 75%; 
+    word-wrap: break-word;
+    display: inline-block;
+    clear: both; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+#chat .user-message {
+    background-color: #d1e7ff; 
+    align-self: flex-end; 
+}
+
+#chat .other-message {
+    background-color: #f1f1f1; 
+    align-self: flex-start; 
+}
+
+#message-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#message {
+    flex: 1;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif; 
 }
 
 #send {
-    width: 100%;
-    padding: 10px;
+    width: 50px;
+    height: 50px;
     background: #28a745;
     border: none;
     color: white;
-    border-radius: 3px;
+    border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#send img {
+    width: 20px;
+    height: 20px;
 }
 
 #send:hover {
     background: #218838;
+}
+
+#chat::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+#chat::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    #chat-container {
+        width: 90%;
+        height: 80%;
+    }
+
+    #name-container {
+        width: 90%;
+    }
+}
+
+#chat div strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px; 
 }
